@@ -50,7 +50,10 @@
     },
 
     computed:{
-      ...mapState(['address','categorys']),
+      ...mapState({
+        address:state=>state.msite.address,
+        categorys:state=>state.msite.categorys
+      }),
       //用来产生的轮播的二维数组
       categorysArr () {
         //取出数据
